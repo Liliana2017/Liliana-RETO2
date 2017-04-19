@@ -23,3 +23,33 @@ class ViewController: UIViewController {
 
 }
 
+class Auto (Velocidades, cambioDeVelocidad(auto, velocidad){
+var velocidades : Int
+init (velocidadInicial: Velocidades){
+self.apagado = .apagado
+self.velocidadBaja = .velocidadBaja
+self.velocidadMedia = .velocidadMedia
+self.velocidadAlta = .velocidadAlta
+}
+func cambioDeVelocidad() {
+for cambio in 0...120{
+if cambio <= 0 {
+print("El auto esta Apagado")
+}else if cambio <= 20 {
+print("El auto esta en velocidad baja")
+}else if cambio >= 20 && <= 50 {
+print("El auto esta a velocidadmedia")
+}else cambio >= 50 && <= 120{
+print("El auto esta en velocidad Alta")
+}
+}
+}
+enum Velocidades: Int{
+case apagado = 0
+case velocidadBaja = 20
+case velocidadMedia = 50
+case velocidadAlta = 120
+}
+
+var miAuto = Auto(Velocidades, cambioDeVelocidad())
+print(/miAuto)
